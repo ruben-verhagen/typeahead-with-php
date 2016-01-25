@@ -3,4 +3,4 @@ I've put some code to implement <a href="https://twitter.github.io/typeahead.js/
 
 Super simple PHP is included to provide the dummy live feed.
 
-Have fun
+Have fun !

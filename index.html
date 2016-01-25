@@ -8,7 +8,6 @@
   <script src="js/typeahead.bundle.js" ></script>
   <script>
   $(document).ready(function() {
-
     var dataFeed = new Bloodhound({
       datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
       queryTokenizer: Bloodhound.tokenizers.whitespace,
@@ -21,14 +20,15 @@
 
     $('#remote .typeahead').typeahead(
       {
-        minLength: 2
+        minLength: 2  // minimum # of characters to trigger typeahead
       },
       {
-      name: 'hint-name',
-      display: 'name',
-      source: dataFeed,
-      valueKey: 'id',
-    });
+        name: 'hint-name',
+        display: 'name',
+        source: dataFeed,
+        limit: 10     // max # of suggestions to show
+      }
+  );
   });
 
   </script>
